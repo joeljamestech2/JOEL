@@ -88,23 +88,23 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
           },
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
-              text: `┏❐
-┃𝚋𝚘𝚝 𝚗𝚊𝚖𝚎:𝙹𝙾𝚎𝚕 𝚋𝚘𝚝*
+              text: `┏❐ 𝙹𝙾𝚎𝚕 𝙼𝚍 
+┃𝚋𝚘𝚝 𝚗𝚊𝚖𝚎: *𝙹𝙾𝚎𝚕 𝚋𝚘𝚝*
 ╽𝚟𝚒𝚜𝚒𝚘𝚗: 𝟼.𝟶.𝟶
 ┃ᴏᴡɴᴇʀ : *𝙹𝚘𝚎𝚕*      
-┃𝚜𝚝𝚊𝚝𝚞𝚜:𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎
-┃𝚙𝚕𝚊𝚝𝚒𝚏𝚘𝚛𝚖: 𝚌𝚑𝚛𝚘𝚖𝚎(𝙻𝚒𝚗𝚞𝚡)
+┃𝚜𝚝𝚊𝚝𝚞𝚜: *𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎*
+┃𝚙𝚕𝚊𝚝𝚒𝚏𝚘𝚛𝚖: *𝚌𝚑𝚛𝚘𝚖𝚎(𝙻𝚒𝚗𝚞𝚡)*
 ┃𝚖𝚘𝚜𝚎 : *${mode}*
 ┃𝚙𝚛𝚎𝚏𝚒𝚡: [${pref}]
-┃𝚝𝚑𝚎𝚖𝚎:𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑
-┃𝙻𝚒𝚋𝚛𝚊𝚛𝚢:𝚋𝚊𝚒𝚕𝚠𝚊𝚢𝚜(𝚆𝙱)
+┃𝚝𝚑𝚎𝚖𝚎: *𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑*
+┃𝙻𝚒𝚋𝚛𝚊𝚛𝚢: *𝚋𝚊𝚒𝚕𝚠𝚊𝚢𝚜(𝚆𝙱)*
 ┗❑`
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
               text: "𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙹𝙾𝚎𝚕 𝚔𝚊𝚗𝚐'𝚘𝚖𝚊"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./src/Mercedes.jpg')}, { upload: Matrix.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./joel/joel.jpg')}, { upload: Matrix.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: "",
@@ -221,8 +221,8 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
   }
       if (selectedId == "View All Menu") {
         const str = `Hello ${m.pushName} ${pushwish}
-┏❑
-┃𝚋𝚘𝚝 𝚗𝚊𝚖𝚎:𝙹𝙾𝚎𝚕 𝚋𝚘𝚝*
+┏❑ 𝙹𝙾𝚎𝚕 𝚖𝚍 𝚋𝚘𝚝
+┃𝚋𝚘𝚝 𝚗𝚊𝚖𝚎:*𝙹𝙾𝚎𝚕 𝚋𝚘𝚝*
 ╽𝚟𝚒𝚜𝚒𝚘𝚗: 𝟼.𝟶.𝟶
 ┃ᴏᴡɴᴇʀ : *𝙹𝚘𝚎𝚕*      
 ┃𝚜𝚝𝚊𝚝𝚞𝚜:𝚋𝚘𝚝 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎
@@ -232,7 +232,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃𝚝𝚑𝚎𝚖𝚎:𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑
 ┃𝙻𝚒𝚋𝚛𝚊𝚛𝚢:𝚋𝚊𝚒𝚕𝚠𝚊𝚢𝚜(𝚆𝙱)
 ┗❑
-┏❐𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁
+┏❐ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁
 ┃✰ ${prefix}𝙰𝚃𝚃𝙿
 ┃✰ ${prefix}𝙰𝚃𝚃𝙿2
 ┃✰ ${prefix}𝙰𝚃𝚃𝙿3
@@ -241,7 +241,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝙴𝙼𝙾𝙹𝙸𝙼𝙸𝚇
 ┃✰ ${prefix}𝙼𝙿3
 ┗❑
-┏❐𝙰𝙸 
+┏❐ 𝙰𝙸 
 ┃✰ ${prefix}𝙰𝚒
 ┃✰ ${prefix}𝙱𝚞𝚐
 ┃✰ ${prefix}𝚁𝚎𝚙𝚘𝚛𝚝
@@ -250,14 +250,14 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝚁𝚎𝚖𝚒𝚗𝚒
 ┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
 ┗❑
-┏❐𝚃𝙾𝙾𝙻 
+┏❐ 𝚃𝙾𝙾𝙻 
 ┃✰ ${prefix}𝙲𝚊𝚕𝚌𝚞𝚕𝚊𝚝𝚘𝚛
 ┃✰ ${prefix}𝚃𝚎𝚖𝚙𝚖𝚊𝚒𝚕
 ┃✰ ${prefix}𝙲𝚑𝚎𝚌𝚔𝚖𝚊𝚒𝚕
 ┃✰ ${prefix}𝚃𝚛𝚝
 ┃✰ ${prefix}𝚃𝚝𝚜
 ┗❑
-┏❐𝙶𝚁𝙾𝚄𝙿 
+┏❐ 𝙶𝚁𝙾𝚄𝙿 
 ┃✰ ${prefix}𝙻𝚒𝚗𝚔𝙶𝚛𝚘𝚞𝚙
 ┃✰ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚐𝚌
 ┃✰ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎
@@ -275,7 +275,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝙳𝚎𝚖𝚘𝚝𝚎
 ┃✰ ${prefix}𝙶𝚎𝚝𝚋𝚒𝚘
 ┗❑
-╭❐𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳
+╭❐ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳
 ┃✰ ${prefix}𝙰𝚙𝚔
 ┃✰ ${prefix}𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔
 ┃✰ ${prefix}𝙼𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎
@@ -292,7 +292,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝚈𝚝𝚖𝚙4𝚍𝚘𝚌
 ┃✰ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
 ╰❑
-╭❐𝚂𝙴𝙰𝚁𝙲𝙷
+╭❐ 𝚂𝙴𝙰𝚁𝙲𝙷
 ┃✰ ${prefix}𝙿𝚕𝚊𝚢
 ┃✰ ${prefix}𝚈𝚝𝚜
 ┃✰ ${prefix}𝙸𝚖𝚍𝚋
@@ -305,14 +305,14 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝚁𝚒𝚗𝚐𝚝𝚘𝚗𝚎
 ┃✰ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
 ╰❑
-╭❐𝙼𝙰𝙸𝙽
+╭❐ 𝙼𝙰𝙸𝙽
 ┃✰ ${prefix}𝙿𝚒𝚗𝚐
 ┃✰ ${prefix}𝙰𝚕𝚒𝚟𝚎
 ┃✰ ${prefix}𝙾𝚠𝚗𝚎𝚛
 ┃✰ ${prefix}𝙼𝚎𝚗𝚞
 ┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
 ╰❑
-╭❐𝙾𝚆𝙽𝙴𝚁
+╭❐ 𝙾𝚆𝙽𝙴𝚁
 ┃✰ ${prefix}𝙹𝚘𝚒𝚗
 ┃✰ ${prefix}𝙻𝚎𝚊𝚟𝚎
 ┃✰ ${prefix}𝙱𝚕𝚘𝚌𝚔
@@ -326,7 +326,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝙰𝚞𝚝𝚘𝚁𝚎𝚊𝚍
 ┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
 ╰❑
-╭❐𝚂𝚃𝙰𝙻𝙺
+╭❐ 𝚂𝚃𝙰𝙻𝙺
 ┃✰ ${prefix}𝚃𝚛𝚞𝚎𝚌𝚊𝚕𝚕𝚎𝚛
 ┃✰ ${prefix}𝙸𝚗𝚜𝚝𝚊𝚂𝚝𝚊𝚕𝚔
 ┃✰ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
@@ -340,8 +340,8 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
             },
             message: {
                 contactMessage: {
-                    displayName: `Mercedes`,
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'Mercedes'\nitem1.TEL;waid=${
+                    displayName: `𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑`,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'𝙻𝙾𝚛𝚍 𝙹𝙾𝚎𝚕'\nitem1.TEL;waid=${
                         m.sender.split("@")[0]
                     }:${
                         m.sender.split("@")[0]
@@ -358,7 +358,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
               }
@@ -397,7 +397,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
               }
@@ -430,7 +430,7 @@ await Matrix.sendMessage(m.from, {
 ╰❑
      `
      await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
     mentionedJid: [m.sender], 
@@ -455,7 +455,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -463,7 +463,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
@@ -494,7 +494,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -502,7 +502,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "JOel",
                   serverMessageId: 143
                 }
               }
@@ -530,7 +530,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
 ┗❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -538,7 +538,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
@@ -558,7 +558,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -566,7 +566,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
@@ -589,7 +589,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚃𝚝𝚜
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -597,7 +597,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
@@ -621,7 +621,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -629,7 +629,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
@@ -654,7 +654,7 @@ await Matrix.sendMessage(m.from, {
 ╰❑
      `
      await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -662,7 +662,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
               }
