@@ -306,7 +306,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363299029326322@newsletter',
-                  newsletterName: "Mercedes",
+                  newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
               }
@@ -489,7 +489,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 ┃✰ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
 ╰❑`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/Mercedes.jpg'), 
+  image: fs.readFileSync('./joel/joel.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
