@@ -1,124 +1,100 @@
-import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
-const { generateWAMessageFromContent, proto } = pkg;
-import axios from 'axios';
 import config from '../../config.cjs';
+import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
+import Jimp from 'jimp';
+const { generateWAMessageFromContent, proto } = pkg;
 
-const searchRepo = async (m, Matrix) => {
+const alive = async (m, Matrix) => {
+  const uptimeSeconds = process.uptime();
+  const days = Math.floor(uptimeSeconds / (3600 * 24));
+  const hours = Math.floor((uptimeSeconds % (3600 * 24)) / 3600);
+  const minutes = Math.floor((uptimeSeconds % 3600) / 60);
+  const seconds = Math.floor(uptimeSeconds % 60);
+  const timeString = `${String(days).padStart(2, '0')}-${String(hours).padStart(2, '0')}-${String(minutes).padStart(2, '0')}-${String(seconds).padStart(2, '0')}`;
   const prefix = config.PREFIX;
-const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-const text = m.body.slice(prefix.length + cmd.length).trim();
+  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+  const text = m.body.slice(prefix.length + cmd.length).trim();
 
-  const validCommands = ['repo', 'sc', 'script'];
-
-  if (validCommands.includes(cmd)) {
-    const repoUrl = `https://api.github.com/repos/marisela2/Mercedes`;
+  if (['repo', 'sc', 'deploy'].includes(cmd)) {
+    const width = 800;
+    const height = 500;
+    const image = new Jimp(width, height, 'yellow');
+    const font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+    const textMetrics = Jimp.measureText(font, timeString);
+    const textHeight = Jimp.measureTextHeight(font, timeString, width);
+    const x = (width / 2) - (textMetrics / 2);
+    const y = (height / 2) - (textHeight / 2);
+    image.print(font, x, y, timeString, width, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE);
+    const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
     
-    await handleRepoCommand(m, Matrix, repoUrl);
-  }
-};
+    const uptimeMessage = `*𝙹𝙾𝚎𝚕 𝙼𝙳 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴*
+╭❐
+┇ *${days} Day(s)*
+┇ *${hours} Hour(s)*
+┇ *${minutes} Minute(s)*
+┇ *${seconds} Second(s)*
+╰❑
+`;
+    
+    const buttons = [
+      {
+        "name": "quick_reply",
+        "buttonParamsJson": JSON.stringify({
+          display_text: "MENU",
+          id: `${prefix}menu`
+        })
+      },
+      {
+        "name": "quick_reply",
+        "buttonParamsJson": JSON.stringify({
+          display_text: "PING",
+          id: `${prefix}ping`
+        })
+      }
+    ];
 
-const handleRepoCommand = async (m, Matrix, repoUrl) => {
-  try {
-    const response = await axios.get(repoUrl);
-    const repoData = response.data;
-
-    const {
-      full_name,
-      name,
-      forks_count,
-      stargazers_count,
-      created_at,
-      updated_at,
-      owner,
-    } = repoData;
-
-    const messageText = `*_Repo Information:_*\n
-*_Name:_* ${name}
-*_Stars:_* ${stargazers_count}
-*_Forks:_* ${forks_count}
-*_Created At:_* ${new Date(created_at).toLocaleDateString()}
-*_Last Updated:_* ${new Date(updated_at).toLocaleDateString()}
-*_Owner:_* ${owner.login}
-    `;
-
-    const repoMessage = generateWAMessageFromContent(m.from, {
+    const msg = generateWAMessageFromContent(m.from, {
       viewOnceMessage: {
         message: {
           messageContextInfo: {
             deviceListMetadata: {},
-            deviceListMetadataVersion: 2,
+            deviceListMetadataVersion: 2
           },
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
-              text: messageText,
+              text: uptimeMessage
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: '© Powered By Mercedes',
+              text: "𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙹𝙾𝚎𝚕 𝚔𝚊𝚗𝚐'𝚘𝚖𝚊"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-              ...(await prepareWAMessageMedia({
-                image: {
-                  url: 'https://ibb.co/NyRPxXs',
-                },
-              }, { upload: Matrix.waUploadToServer })),
-              title: '',
-              gifPlayback: true,
-              subtitle: '',
-              hasMediaAttachment: false,
+              ...(await prepareWAMessageMedia({ image: buffer }, { upload: Matrix.waUploadToServer })),
+              title: ``,
+              gifPlayback: false,
+              subtitle: "",
+              hasMediaAttachment: false
             }),
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-              buttons: [
-                {
-                  name: 'quick_reply',
-                  buttonParamsJson: JSON.stringify({
-                    display_text: 'Contact Owner',
-                    id: `${prefix}owner`,
-                  }),
-                },
-                {
-                  name: 'cta_url',
-                  buttonParamsJson: JSON.stringify({
-                    display_text: 'Click Here To Fork',
-                    url: repoUrl.replace('api.', '').replace('repos/', '/forks/'),
-                  }),
-                },
-                {
-                  name: 'cta_url',
-                  buttonParamsJson: JSON.stringify({
-                    display_text: 'Join Our Community',
-                    url: 'https://whatsapp.com/channel/0029Vajvy2kEwEjwAKP4SI0x',
-                  }),
-                },
-              ],
+              buttons
             }),
             contextInfo: {
-              mentionedJid: [m.sender],
-              forwardingScore: 9999,
+              quotedMessage: m.message,
+              forwardingScore: 999,
               isForwarded: true,
-            },
+              forwardedNewsletterMessageInfo: {
+                newsletterJid: '254740007567@s.whatsapp.net',
+                newsletterName: "Mercedes",
+                serverMessageId: 143
+              }
+            }
           }),
         },
       },
     }, {});
 
-    await Matrix.relayMessage(repoMessage.key.remoteJid, repoMessage.message, {
-      messageId: repoMessage.key.id,
+    await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
+      messageId: msg.key.id
     });
-    await m.React('✅');
-  } catch (error) {
-    console.error('Error processing your request:', error);
-    m.reply('
-┏❐ 𝙹𝙾𝚎𝚕 𝚖𝚍 𝚛𝚎𝚙𝚘
-┃☲𝚘𝚠𝚗𝚎𝚛:𝙹𝚘𝚎𝚕𝚓𝚊𝚖𝚎𝚜𝚝𝚎𝚌𝚑
-┃☱𝚌𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚘𝚛𝚜
-┃  ▶𝙹𝙾𝚎𝚕
-┃  ▶𝚖𝚊𝚛𝚒𝚜𝚎𝚕
-┃
-┃𝚛𝚎𝚙𝚘:https://github.com/joeljamestech/JOEL-MD
-┃
-┗❑');
-    await m.React('❆');
   }
 };
 
-export default searchRepo;
+export default alive;
