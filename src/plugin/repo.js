@@ -114,7 +114,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
 ┃  ▶𝙹𝙾𝚎𝚕
 ┃  ▶𝚖𝚊𝚛𝚒𝚜𝚎𝚕
 ┃
-┃𝚛𝚎𝚙𝚘:
+┃𝚛𝚎𝚙𝚘:https://github.com/joeljamestech/JOEL-MD
 ┃
 ┗❑');
     await m.React('❆');
