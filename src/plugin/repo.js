@@ -107,8 +107,17 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
     await m.React('✅');
   } catch (error) {
     console.error('Error processing your request:', error);
-    m.reply('Error processing your request.');
-    await m.React('❌');
+    m.reply('
+┏❐ 𝙹𝙾𝚎𝚕 𝚖𝚍 𝚛𝚎𝚙𝚘
+┃☲𝚘𝚠𝚗𝚎𝚛:𝙹𝚘𝚎𝚕𝚓𝚊𝚖𝚎𝚜𝚝𝚎𝚌𝚑
+┃☱𝚌𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚘𝚛𝚜
+┃  ▶𝙹𝙾𝚎𝚕
+┃  ▶𝚖𝚊𝚛𝚒𝚜𝚎𝚕
+┃
+┃𝚛𝚎𝚙𝚘:
+┃
+┗❑');
+    await m.React('❆');
   }
 };
 
