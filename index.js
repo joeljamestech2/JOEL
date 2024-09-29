@@ -96,15 +96,7 @@ async function start() {
             } else if (connection === 'open') {
                 if (initialConnection) {
                     console.log(chalk.green("😃 𝙹𝙾𝚎𝚕 𝚖𝚍 𝚒𝚜 𝚘𝚗𝚕𝚒𝚗𝚎✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `╔══════☐
-║☐𝙹𝙾𝙴𝙻 𝙼𝙳 𝙱𝙾𝚃
-║☐𝙼𝙾𝙳𝙴: public mode
-║☐𝙿𝚁𝙴𝙵𝙸𝚇: [ . ]
-║☐𝙲𝚁𝙴𝙰𝚃𝙾𝚁:𝙻𝙾𝚛𝚍 𝙹𝚘𝚎𝚕
-╚═══════════════╝
-╔═══════════════╗
- ☐https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
-╚═══════════════╝` });
+                    Matrix.sendMessage(Matrix.user.id, { text: `😃 𝙹𝙾𝚎𝚕 𝚖𝚍 𝚒𝚜 𝚌𝚘𝚗𝚗𝚎𝚌𝚝𝚎𝚍uccessful️ ✅` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
@@ -164,15 +156,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('╔══════☐
-║☐𝙹𝙾𝙴𝙻 𝙼𝙳 𝙱𝙾𝚃
-║☐𝙼𝙾𝙳𝙴: public mode
-║☐𝙿𝚁𝙴𝙵𝙸𝚇: [ . ]
-║☐𝙲𝚁𝙴𝙰𝚃𝙾𝚁:𝙻𝙾𝚛𝚍 𝙹𝚘𝚎𝚕
-╚═══════════════╝
-╔═══════════════╗
- ☐https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
-╚═══════════════╝');
+    res.send('JOEL MD IS ONLINE');
 });
 
 app.listen(PORT, () => {
