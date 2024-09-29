@@ -26,9 +26,9 @@ const alive = async (m, Matrix) => {
     image.print(font, x, y, timeString, width, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE);
     const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
     
-    const uptimeMessage = `*𝙹𝙾𝚎𝚕 𝙼𝙳 Repo*
+    const uptimeMessage = `*𝙹𝙾𝚎𝚕 𝙼𝙳 𝚁𝙴𝙿𝙾*
 ╭❐
-┇ creator:JOel Tech
+┇ creator:𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑
 ┇ repo
 ┇ https://github.com/joeljamestech/JOEL-MD
 ╰❑
@@ -38,15 +38,15 @@ const alive = async (m, Matrix) => {
       {
         "name": "quick_reply",
         "buttonParamsJson": JSON.stringify({
-          display_text: "MENU",
-          id: `${prefix}menu`
+          display_text: "𝚘𝚠𝚗𝚎𝚛",
+          id: `${prefix}owner`
         })
       },
       {
         "name": "quick_reply",
         "buttonParamsJson": JSON.stringify({
-          display_text: "PING",
-          id: `${prefix}ping`
+          display_text: "𝙶𝚒𝚝𝙷𝚞𝚋",
+          id: `https://github.com/joeljamestech/JOEL-MD`
         })
       }
     ];
