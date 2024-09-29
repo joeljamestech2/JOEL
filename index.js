@@ -156,7 +156,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('JOEL MD IS ONLINE');
 });
 
 app.listen(PORT, () => {
