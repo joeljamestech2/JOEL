@@ -2,10 +2,10 @@
   "name": "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
   "version": "10.8.1",
   "description": "Mercedes latest multi device whatsapp bot",
-  "main": "index.js",
+  "main": "joel/joel.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Mercedes",
+    "start": "pm2 start joel.js --deep-monitoring --attach --name Mercedes",
     "stop": "pm2 stop Mercedes",
     "restart": "pm2 restart Mercedes"
   },
