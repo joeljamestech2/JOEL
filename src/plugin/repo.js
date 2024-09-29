@@ -28,10 +28,10 @@ const alive = async (m, Matrix) => {
     
     const uptimeMessage = `*𝙹𝙾𝚎𝚕 𝙼𝙳 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴*
 ╭❐
-┇ *${days} Day(s)*
-┇ *${hours} Hour(s)*
-┇ *${minutes} Minute(s)*
-┇ *${seconds} Second(s)*
+┇ creator:JOel Tech
+┇
+┇ repo
+┇ https://github.com/joeljamestech/JOEL-MD
 ╰❑
 `;
     
