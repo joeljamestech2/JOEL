@@ -665,7 +665,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363299029326322@newsletter',
+                  newsletterJid: '255714595078@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -696,7 +696,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363299029326322@newsletter',
+                  newsletterJid: '255714595078@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -728,7 +728,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363299029326322@newsletter',
+                  newsletterJid: '255714595078@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -761,7 +761,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363299029326322@newsletter',
+                  newsletterJid: '255714595078@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
