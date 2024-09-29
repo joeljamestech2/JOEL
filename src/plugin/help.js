@@ -305,7 +305,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
@@ -457,7 +457,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
@@ -496,7 +496,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕 𝚃𝚎𝚌𝚑",
                   serverMessageId: 143
                 }
@@ -562,7 +562,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -601,7 +601,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "JOel",
                   serverMessageId: 143
                 }
@@ -637,7 +637,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -665,7 +665,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -696,7 +696,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -728,7 +728,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
@@ -761,7 +761,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '255714595078@newsletter',
+                  newsletterJid: '120363296314610373@newsletter',
                   newsletterName: "𝙹𝙾𝚎𝚕",
                   serverMessageId: 143
                 }
